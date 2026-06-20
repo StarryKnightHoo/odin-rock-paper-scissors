@@ -18,3 +18,38 @@ function getHumanChoice() {
     humanChoice = prompt("What will you play?");
 }
 
+function playRound (humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice == "rock") {
+        if (computerChoice == "rock") {
+            console.log("It's a draw!");
+        } else if (computerChoice == "paper") {
+            computerScore++;
+            console.log("You lose! Paper beats Rock");
+        } else {
+            humanScore++;
+            console.log("You win! Rock beats Scissors");
+        }
+    } else if (humanChoice == "paper") {
+        if (computerChoice == "rock") {
+            humanScore++;
+            console.log("You win! Paper beats Rock");
+        } else if (computerChoice == "paper") {
+            console.log("It's a draw!");
+        } else {
+            computerScore++;
+            console.log("You lose! Scissors beat Rock")
+        }
+    } else {
+        if (computerChoice == "rock") {
+            computerScore++;
+            console.log("You lose! Rock beats Scissors");
+        } else if (computerChoice = "paper") {
+            humanScore++;
+            console.log("You win! Scissors beat Paper");
+        } else {
+            console.log("It's a draw!");
+        }
+    }
+
+}
