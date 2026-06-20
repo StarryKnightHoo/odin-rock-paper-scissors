@@ -1,5 +1,7 @@
-let computerChoice = "no input"
-let humanChoice = "no input"
+let computerChoice = "no input";
+let humanChoice = "no input";
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
     let choice = Math.random();
@@ -15,3 +17,4 @@ function getComputerChoice() {
 function getHumanChoice() {
     humanChoice = prompt("What will you play?");
 }
+
