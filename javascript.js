@@ -1,10 +1,12 @@
-function getComputerChoice {
+let computerChoice = "no input"
+
+function getComputerChoice() {
     let choice = Math.random;
     if (choice <= 0.33) {
-        choice = "rock";
+        computerChoice = "rock";
     } else if (choice <= 0.66) {
-        choice = "paper";
+        computerChoice = "paper";
     } else {
-        choice = "scissors";
+        computerChoice = "scissors";
     }
 }
