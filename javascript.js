@@ -13,5 +13,5 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    humanChoice = prompt(What will you play?);
+    humanChoice = prompt("What will you play?");
 }
