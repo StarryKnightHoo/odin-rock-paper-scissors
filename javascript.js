@@ -3,6 +3,7 @@ let humanChoice = "no input";
 let humanScore = 0;
 let computerScore = 0;
 
+
 function getComputerChoice() {
     let choice = Math.random();
     if (choice <= 0.33) {
@@ -38,13 +39,13 @@ function playRound (humanChoice, computerChoice) {
             console.log("It's a draw!");
         } else {
             computerScore++;
-            console.log("You lose! Scissors beat Rock")
+            console.log("You lose! Scissors beat Paper")
         }
-    } else {
+    } else if (humanChoice == "scissors") {
         if (computerChoice == "rock") {
             computerScore++;
             console.log("You lose! Rock beats Scissors");
-        } else if (computerChoice = "paper") {
+        } else if (computerChoice == "paper") {
             humanScore++;
             console.log("You win! Scissors beat Paper");
         } else {
@@ -52,4 +53,12 @@ function playRound (humanChoice, computerChoice) {
         }
     }
 
+}
+
+function playGame () {
+    for (let i = 1; i <= 5; i++) {
+        getComputerChoice();
+        getHumanChoice();
+        playRound(humanChoice, computerChoice);
+    }
 }
