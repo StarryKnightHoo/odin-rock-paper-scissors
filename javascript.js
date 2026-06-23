@@ -31,10 +31,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    humanChoice = prompt("What will you play?");
-}
-
 function playRound (humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice == "rock") {
