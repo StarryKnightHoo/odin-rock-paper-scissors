@@ -56,5 +56,14 @@ function playRound (humanChoice, computerChoice) {
 }
 
 let rock = document.createElement("button");
-let paper = document.createElement("paper");
-let scissors = document.createElement("scissors");
+let paper = document.createElement("button");
+let scissors = document.createElement("button");
+
+rock.textContent = "Rock";
+paper.textContent = "Paper";
+scissors.textContent = "Scissors";
+
+let body = document.body;
+body.appendChild(rock);
+body.appendChild(paper);
+body.appendChild(scissors);
