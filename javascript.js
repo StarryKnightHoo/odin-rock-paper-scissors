@@ -10,13 +10,14 @@ let paper = document.createElement("button");
 let scissors = document.createElement("button");
 
 let results = document.createElement("div");
+let score = document.createElement("div");
 
 body.appendChild(rock);
 body.appendChild(paper);
 body.appendChild(scissors);
 
 body.appendChild(results);
-
+body.appendChild(score);
 
 
 function getComputerChoice() {
@@ -66,6 +67,17 @@ function playRound (humanChoice, computerChoice) {
         } else {
             results.textContent = "It's a draw!";
         }
+    }
+    score.textContent = "human: " + humanScore + "\ncomputer: " + computerScore;
+
+    if (humanScore == 5) {
+        alert("Human wins!");
+        humanScore = 0;
+        computerScore = 0;
+    } else if (computerScore == 5) {
+        alert("Computer wins!")
+        humanScore = 0;
+        computerScore = 0;
     }
 
 }
