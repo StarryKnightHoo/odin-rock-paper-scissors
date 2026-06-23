@@ -55,10 +55,6 @@ function playRound (humanChoice, computerChoice) {
 
 }
 
-function playGame () {
-    for (let i = 1; i <= 5; i++) {
-        getComputerChoice();
-        getHumanChoice();
-        playRound(humanChoice, computerChoice);
-    }
-}
+let rock = document.createElement("button");
+let paper = document.createElement("paper");
+let scissors = document.createElement("scissors");
