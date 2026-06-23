@@ -3,6 +3,21 @@ let humanChoice = "no input";
 let humanScore = 0;
 let computerScore = 0;
 
+let body = document.body;
+
+let rock = document.createElement("button");
+let paper = document.createElement("button");
+let scissors = document.createElement("button");
+
+let results = document.createElement("div");
+
+body.appendChild(rock);
+body.appendChild(paper);
+body.appendChild(scissors);
+
+body.appendChild(results);
+
+
 
 function getComputerChoice() {
     let choice = Math.random();
@@ -23,50 +38,42 @@ function playRound (humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice == "rock") {
         if (computerChoice == "rock") {
-            console.log("It's a draw!");
+            results.textContent = "It's a draw!";
         } else if (computerChoice == "paper") {
             computerScore++;
-            console.log("You lose! Paper beats Rock");
+            results.textContent = "You lose! Paper beats Rock";
         } else {
             humanScore++;
-            console.log("You win! Rock beats Scissors");
+            results.textContent = "You win! Rock beats Scissors";
         }
     } else if (humanChoice == "paper") {
         if (computerChoice == "rock") {
             humanScore++;
-            console.log("You win! Paper beats Rock");
+            results.textContent = "You win! Paper beats Rock";
         } else if (computerChoice == "paper") {
-            console.log("It's a draw!");
+            results.textContent = "It's a draw!";
         } else {
             computerScore++;
-            console.log("You lose! Scissors beat Paper")
+            results.textContent = "You lose! Scissors beat Paper";
         }
     } else if (humanChoice == "scissors") {
         if (computerChoice == "rock") {
             computerScore++;
-            console.log("You lose! Rock beats Scissors");
+            results.textContent = "You lose! Rock beats Scissors";
         } else if (computerChoice == "paper") {
             humanScore++;
-            console.log("You win! Scissors beat Paper");
+            results.textContent = "You win! Scissors beat Paper";
         } else {
-            console.log("It's a draw!");
+            results.textContent = "It's a draw!";
         }
     }
 
 }
 
-let rock = document.createElement("button");
-let paper = document.createElement("button");
-let scissors = document.createElement("button");
-
 rock.textContent = "Rock";
 paper.textContent = "Paper";
 scissors.textContent = "Scissors";
 
-let body = document.body;
-body.appendChild(rock);
-body.appendChild(paper);
-body.appendChild(scissors);
 
 rock.addEventListener("click", function() {
     getComputerChoice();
@@ -80,3 +87,5 @@ scissors.addEventListener("click", function() {
     getComputerChoice();
     playRound("scissors", computerChoice);
 });
+
+
