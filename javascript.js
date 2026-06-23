@@ -67,3 +67,16 @@ let body = document.body;
 body.appendChild(rock);
 body.appendChild(paper);
 body.appendChild(scissors);
+
+rock.addEventListener("click", function() {
+    getComputerChoice();
+    playRound("rock", computerChoice);
+});
+paper.addEventListener("click", function() {
+    getComputerChoice();
+    playRound("paper", computerChoice);
+});
+scissors.addEventListener("click", function() {
+    getComputerChoice();
+    playRound("scissors", computerChoice);
+});
